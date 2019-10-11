@@ -27,7 +27,7 @@ if [ "${INPUT_CACHE}" == "true" ]; then
 fi
 
 # Build The Container
-docker build $BUILDPARAMS -t ${SHA_NAME} -t ${BASE_NAME} -f ${INPUT_DOCKERFILE_PATH} ${INPUT_BUILD_CONTEXT}
+docker build $BUILDPARAMS -t ${SHA_NAME} -f ${INPUT_DOCKERFILE_PATH} ${INPUT_BUILD_CONTEXT}
 
 # Push two versions, with and without the SHA
 docker push ${SHA_NAME}
